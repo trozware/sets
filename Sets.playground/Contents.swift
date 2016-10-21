@@ -16,12 +16,13 @@ if !myArray.contains("cat") {
 }
 
 mySet.insert("goldfish")
+mySet
 mySet.insert("dog")
-
+mySet
 
 // myArray.remove("hamster")
-if let index = myArray.indexOf("hamster") {
-   myArray.removeAtIndex(index)
+if let index = myArray.index(of: "hamster") {
+   myArray.remove(at: index)
 }
 
 mySet.remove("hamster")
@@ -38,7 +39,7 @@ for animal in mySet {
    print(animal)
 }
 
-for (index, animal) in mySet.enumerate() {
+for (index, animal) in mySet.enumerated() {
    print("\(index) = \(animal)")
 }
 
@@ -51,29 +52,29 @@ for (index, animal) in mySet.enumerate() {
 let set1: Set = ["dog", "cat", "pig"]
 let set2: Set = ["cow", "horse", "pig"]
 
-let intersect = set1.intersect(set2)
+let intersect = set1.intersection(set2)
+let subtract = set1.subtracting(set2)
 let union = set1.union(set2)
-let xor = set1.exclusiveOr(set2)
-let subtract = set1.subtract(set2)
+let xor = set1.symmetricDifference(set2)
 
 //: ### Sub-sets:
 let smallSet: Set = ["pig", "cow"]
 
-smallSet.isSubsetOf(set1)
-smallSet.isSubsetOf(set2)
+smallSet.isSubset(of: set1)
+smallSet.isSubset(of: set2)
 
-set1.isSubsetOf(set1)
-set1.isStrictSubsetOf(set1)
+set1.isSubset(of: set1)
+set1.isStrictSubset(of: set1)
 
 //: ### Super-sets:
-set1.isSupersetOf(smallSet)
-set2.isSupersetOf(smallSet)
+set1.isSuperset(of: smallSet)
+set2.isSuperset(of: smallSet)
 
-set1.isSupersetOf(set1)
-set1.isStrictSupersetOf(set1)
+set1.isSuperset(of: set1)
+set1.isStrictSuperset(of: set1)
 
 //: ### Disjoint sets:
 let otherSet: Set = ["bird", "chicken"]
 
-set1.isDisjointWith(set2)
-set1.isDisjointWith(otherSet)
+set1.isDisjoint(with: set2)
+set1.isDisjoint(with: otherSet)
