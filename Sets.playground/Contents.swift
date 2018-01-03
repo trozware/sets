@@ -1,5 +1,5 @@
 //: # Sets:
-//: [Playground to accompany this tutorial article](http://troz.net/2016/05/learning-swift-sets/): http://troz.net/2016/05/learning-swift-sets/
+//: [Playground to accompany this tutorial article](https://troz.net/post/2016/learning-swift-sets/): https://troz.net/post/2016/learning-swift-sets/
 //:
 //: **A Set is an un-ordered collection of unique items.**
 
